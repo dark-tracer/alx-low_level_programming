@@ -1,4 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 /**
  * main - Prog Entry point
  * Return: Always 0 (Success)
@@ -6,31 +9,23 @@
 
 int main(void)
 {
-	int i = '0';
-	int j = '0';
+	int d, p;
 
-	while (i <= '9')
+	for (d = '0'; d < '9'; d++)
 	{
-		while (j <= '9')
+		for (p = d + 1; p <= '9'; p++)
 		{
-			if (!(i > j) || i == j)
+			if (p != d)
 			{
-				putchar(i);
-				putchar(j);
-				if (i == '8' && j == '9')
-				{
-					putchar('\n');
-				}
-				else
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(d);
+				putchar(p);
+				if (d =='8' && p == '9')
+					continue;
+				putchar(',');
+				putchar(' ');
 			}
-			j++;
 		}
-		 j = '0';
-		 i++;
 	}
+	putchar('\n');
 	return (0);
 }
