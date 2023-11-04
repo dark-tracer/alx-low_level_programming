@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /**
- * string nconcat -  concatenate two strings while
- * second string is an n value
+ * string_nconcat - concatenate two strings while
+ * limiting the concatenation of the second string to 'n' elements.
  * @s1: string one
  * @s2: string two
- * @n: number of string to concantenate from s2
+ * @n: number of elements to concatenate from s2
  * Return: pointer to the new allocated memory
  */
 
